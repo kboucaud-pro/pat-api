@@ -11,7 +11,9 @@ export class CreateUserDto {
 
 	@IsString()
 	@MinLength(3, { message: 'Username must have at least 3 characters' })
-	@IsAlphanumeric(null, { message: 'Username must only be composed of alphanumeric characters' })
+	@IsAlphanumeric(null, {
+		message: 'Username must only be composed of alphanumeric characters',
+	})
 	username: string;
 
 	@IsNotEmpty()
